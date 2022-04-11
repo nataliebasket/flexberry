@@ -1,0 +1,23 @@
+body {
+  background-color: var(--back-color);
+  font-family: "Open Sans", serif;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.page-container {
+  width: 754px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  clip: rect(0 0 0 0);
+}

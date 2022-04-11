@@ -1,0 +1,45 @@
+{
+  "name": "flexberry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "stylelint": "stylelint \"source/sсss/**/*.scss\"",
+    "test": "npm run stylelint",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nataliebasket/flexberry.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nataliebasket/flexberry/issues"
+  },
+  "homepage": "https://github.com/nataliebasket/flexberry#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "eslint": "^8.13.0",
+    "eslint-config-htmlacademy": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "postcss-import": "^14.1.0",
+    "postcss-scss": "^4.0.3",
+    "stylelint": "^14.6.1",
+    "stylelint-config-standard-scss": "^3.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ]
+}

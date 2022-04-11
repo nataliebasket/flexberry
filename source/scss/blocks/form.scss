@@ -1,0 +1,74 @@
+.form {
+  background-color: var(--back-color-card);
+  padding-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding-bottom: 10px;
+  width: 232px;
+  flex-grow: 0;
+}
+
+.form__filters {
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+}
+
+.form__legend {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  padding: 0;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.form__filter {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 20px auto;
+  gap: 10px;
+}
+
+.form__filter:hover {
+  background-color: var(--checkbox-back-color);
+}
+
+.form__filter__checkbox {
+  appearance: none;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--checkbox-border-color);
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+}
+
+.form__filter__checkbox::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--check-color);
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  clip-path: polygon(41% 78%, 90% 27%, 100% 37%, 41% 100%, 0 54%, 12% 44%);
+}
+
+.form__filter__checkbox:checked::before {
+  transform: scale(1);
+}
+
+.form__filter__checkbox:checked {
+  border-color: var(--check-color);
+}
