@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "stylelint": "stylelint \"source/sсss/**/*.scss\"",
+    "stylelint": "stylelint \"./source/**/**/*.scss\"",
     "test": "npm run stylelint",
     "start": "gulp"
   },
