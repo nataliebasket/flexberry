@@ -52,11 +52,13 @@ function reloadServer (done) {
 function watcher () {
   watch('./source/scss/**/*.scss', series(styles));
   watch('./source/**/*.html', series(html, reloadServer));
+  watch('./source/**/*.js', series(reloadServer));
 }
 
 export function copyOther () {
   return src([
     './source/fonts/*.{woff2,woff}',
+    './source/js/*.js',
   ], {
     base: './source'
   })
