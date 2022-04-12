@@ -1,18 +1,28 @@
-const getData = () => fetch('https://front-test.beta.aviasales.ru/search',
-  {mode: 'no-cors',
+// const getData = () => fetch('./js/response-example.json')
+//   .then((response) => {
+//     if (response.ok) {
+//       return response.json();
+//     }
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch(() => {
+//     console.log('Ошибка');
+//   });
 
-  })
-  .then((response) => {
-    console.log(response);
-    if (response.ok) {
-      return response.json();
-    }
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch(() => {
-    console.log('Ошибка');
-  });
+// export {getData};
 
-export {getData};
+const getAds = async () => {
+  let response;
+  try {
+    response = await fetch('./js/response-example.json');
+  }
+  catch (err) {
+    return [];
+  }
+  const tickets = await response.json();
+  return tickets;
+};
+
+export {getAds};

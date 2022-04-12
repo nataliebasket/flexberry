@@ -1,6 +1,16 @@
-// import {getData} from './api.js';
+import {getAds} from './api.js';
 
-// getData();
 
-const json1 = JSON.parse('./response-example.json');
-console.log( json1);
+(async () => {
+  const tickets = await getAds();
+  console.log(tickets);
+  console.log(typeof tickets);
+  console.log(tickets.tickets[0]);
+  console.log(typeof tickets.tickets);
+
+
+  // allAds.slice(0, COUNT_OF_ADS).forEach((ad) => {
+  //   createMarker(ad);
+  //   disableMapFilters(false);
+  // });
+})();

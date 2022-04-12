@@ -60,7 +60,7 @@ export function copyOther () {
 
 export function copyJs () {
   return src([
-    './source/js/*.js',
+    './source/js/*.{js,json}',
   ], {
     base: './source'
   })
