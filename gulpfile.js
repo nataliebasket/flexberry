@@ -49,15 +49,17 @@ function reloadServer (done) {
   done();
 }
 
-function watcher () {
-  watch('./source/scss/**/*.scss', series(styles));
-  watch('./source/**/*.html', series(html, reloadServer));
-  watch('./source/**/*.js', series(reloadServer));
-}
-
 export function copyOther () {
   return src([
     './source/fonts/*.{woff2,woff}',
+  ], {
+    base: './source'
+  })
+    .pipe(dest('./public'));
+}
+
+export function copyJs () {
+  return src([
     './source/js/*.js',
   ], {
     base: './source'
@@ -69,13 +71,20 @@ export function clear () {
   return del('./public');
 }
 
+function watcher () {
+  watch('./source/scss/**/*.scss', series(styles));
+  watch('./source/**/*.html', series(html, reloadServer));
+  watch('./source/js/*.js', series(copyJs, reloadServer));
+}
+
 export default series (
   clear,
   parallel(
     styles,
     html,
     copyImg,
-    copyOther
+    copyOther,
+    copyJs
   ),
   series (
     server,
