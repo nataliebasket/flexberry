@@ -91,3 +91,14 @@ export default series (
     watcher
   )
 );
+
+export const build =  series (
+  clear,
+  parallel(
+    styles,
+    html,
+    copyImg,
+    copyOther,
+    copyJs
+  )
+);
