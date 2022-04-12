@@ -1,16 +1,14 @@
 import {getAds} from './api.js';
-
+import {createCard} from './card.js';
 
 (async () => {
   const tickets = await getAds();
-  console.log(tickets);
-  console.log(typeof tickets);
-  console.log(tickets.tickets[0]);
-  console.log(typeof tickets.tickets);
+  // console.log(tickets);
+  // console.log(typeof tickets);
+  // console.log(tickets.tickets[0]);
+  // console.log(typeof tickets.tickets);
 
-
-  // allAds.slice(0, COUNT_OF_ADS).forEach((ad) => {
-  //   createMarker(ad);
-  //   disableMapFilters(false);
-  // });
+  tickets.tickets.slice(100, 115).forEach((card) => {
+    document.querySelector('.search-tikets__container').append(createCard(card));
+  });
 })();
