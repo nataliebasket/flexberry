@@ -23,8 +23,8 @@ const createCard = (obj) => {
   cardDuration[1].textContent = getTimeFromMins(obj.segments[1].duration);
   cardStops[0].textContent = `${obj.segments[0].stops.length} ${getWordEnd(obj.segments[0].stops.length, 'пересадка', 'пересадки', 'пересадок')}`;
   cardStops[1].textContent = `${obj.segments[1].stops.length} ${getWordEnd(obj.segments[1].stops.length, 'пересадка', 'пересадки', 'пересадок')}`;
-  cardTransfers[0].textContent = `${obj.segments[0].stops.toString()}`;
-  cardTransfers[1].textContent = `${obj.segments[1].stops.toString()}`;
+  cardTransfers[0].textContent = `${obj.segments[0].stops.join(', ')}`;
+  cardTransfers[1].textContent = `${obj.segments[1].stops.join(', ')}`;
 
   return cardElement;
 };

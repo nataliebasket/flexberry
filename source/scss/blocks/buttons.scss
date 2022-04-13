@@ -14,6 +14,8 @@
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   background-color: var(--back-color-card);
+  display: block;
+  box-sizing: border-box;
 }
 
 .buttons__button {
@@ -46,6 +48,8 @@
   border-radius: 0 4px 4px 0;
   border: 1px solid var(--border-color);
   overflow: hidden;
+  display: block;
+  box-sizing: border-box;
 }
 
 .buttons__item:hover {

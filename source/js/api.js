@@ -1,19 +1,4 @@
-// const getData = () => fetch('./js/response-example.json')
-//   .then((response) => {
-//     if (response.ok) {
-//       return response.json();
-//     }
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch(() => {
-//     console.log('Ошибка');
-//   });
-
-// export {getData};
-
-const getAds = async () => {
+const getCards = async () => {
   let response;
   try {
     response = await fetch('./js/response-example.json');
@@ -25,4 +10,4 @@ const getAds = async () => {
   return tickets;
 };
 
-export {getAds};
+export {getCards};
