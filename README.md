@@ -1,4 +1,5 @@
-# flexberry
-Тестовое задание для Flexberry
+## Тестовое задание для Flexberry
 
-<a href="https://nataliebasket.github.io/flexberry/">Посмотреть тут.</a>
+Сборка - Gulp, препроцессор Sass, линтинг.
+
+<a href="https://nataliebasket.github.io/flexberry/">Опубликованный проект.</a>
