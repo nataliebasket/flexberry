@@ -14,7 +14,6 @@ let fast = false;
 
 (async () => {
   tickets = await getCards();
-  console.log(tickets);
   tickets.tickets.slice(100, 105).forEach((card) => {
     document.querySelector('.search-tikets__wrapper').append(createCard(card));
   });
@@ -32,7 +31,7 @@ const createTickets = (isCheap, isFast) => {
   tiketsWrapper.innerHTML = '';
   newTickets = tickets.tickets.filter((ticket) => checkFilter(ticket));
   if (isCheap) { newTickets.sort( (a, b) => a.price - b.price );}
-  if (isFast) { newTickets.sort( (a, b) => a.segments[0].duration - b.segments[0].duration );}
+  if (isFast) { newTickets.sort( (a, b) => (a.segments[0].duration + a.segments[1].duration) - (b.segments[0].duration + b.segments[1].duration));}
   newTickets.slice(0, 5).forEach((card) => {
     document.querySelector('.search-tikets__wrapper').append(createCard(card));
   });
@@ -59,16 +58,3 @@ const onClickFastButton = () => {
 cheapButton.addEventListener('click', onClickCheapButton);
 fastButton.addEventListener('click', onClickFastButton);
 checkboxForm.addEventListener('change', onChangeCheckboxForm);
-
-const privet1 = () => {
-  setTimeout(() => {console.log('Привет1');}, 4000);
-};
-
-const privet2 = () => {
-  setTimeout(() => {console.log('Привет2');}, 500);
-};
-
-privet1();
-privet2();
-console.log('Привет3');
-
